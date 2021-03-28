@@ -1,3 +1,33 @@
 #root {
-  color: red;
+  margin: 2em;
+}
+
+header {
+  text-align: center;
+  margin-top: 1em;
+}
+
+.btn {
+  margin-left: 1em;
+  background-color: rgb(60, 148, 139) !important;
+  color: white;
+}
+img {
+  padding: 1%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(31, 75, 71);
+}
+
+.card-body {
+  background-color: rgb(60, 148, 139);
+  color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(31, 75, 71);
+}
+.card-footer {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(31, 75, 71);
 }
