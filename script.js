@@ -33,7 +33,7 @@ function makePageForEpisodes(episodeList) {
     let cardText = clone.querySelector(".card-text");
     cardText.innerHTML = `${myEp.summary}`;
 
-    let cardButton = document.querySelector(".btn");
+    let cardButton = clone.querySelector(".btn");
     cardButton.href = myEp.url;
     cardContainer.appendChild(clone);
   }
