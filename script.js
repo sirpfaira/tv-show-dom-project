@@ -16,7 +16,7 @@ function makePageForEpisodes(episodeList) {
   ).slice(-2)}`;
   let cardText = document.querySelector(".card-text");
   cardText.innerHTML = `${myEp.summary}`;
-  const cardButton = document.querySelector(".btn");
+  let cardButton = document.querySelector(".btn");
   cardButton.href = myEp.url;
 
   for (let x = 1; x < episodeList.length; x++) {
@@ -33,6 +33,8 @@ function makePageForEpisodes(episodeList) {
     let cardText = clone.querySelector(".card-text");
     cardText.innerHTML = `${myEp.summary}`;
 
+    let cardButton = document.querySelector(".btn");
+    cardButton.href = myEp.url;
     cardContainer.appendChild(clone);
   }
 }
