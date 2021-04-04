@@ -1,10 +1,26 @@
-#root {
+#content-container {
   margin: 2em;
+}
+body {
+  background-image: url('/img/background-image.jpg');
 }
 
 header {
   text-align: center;
   margin-top: 1em;
+  margin-bottom: 1em;
+  font-family: 'Special Elite', cursive;
+}
+main {
+  font-family: 'Special Elite', cursive;
+}
+#search-panel {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: row;
+  padding-left: 2em;
+  align-items: baseline;
+  justify-content: center;
 }
 
 .btn {
@@ -20,14 +36,28 @@ img {
 }
 
 .card-body {
-  background-color: rgb(60, 148, 139);
+  background-color: rgb(17, 75, 80);
   color: white;
   border-style: solid;
   border-width: 1px;
   border-color: rgb(31, 75, 71);
+  text-align: center;
 }
 .card-footer {
   border-style: solid;
   border-width: 1px;
   border-color: rgb(31, 75, 71);
+  background-color: rgb(17, 67, 66) !important;
+}
+
+small {
+  color: white;
+}
+.left-spacing {
+  margin-left: 1em;
+}
+#search-count {
+  background-color: rgb(17, 67, 66);
+  color: white;
+  padding: 0.5em;
 }
