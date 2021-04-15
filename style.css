@@ -9,11 +9,20 @@ header {
   text-align: center;
   margin-top: 1em;
   margin-bottom: 1em;
+
   font-family: 'Special Elite', cursive;
 }
 main {
   font-family: 'Special Elite', cursive;
 }
+#page-heading {
+  margin-left: 2em;
+  margin-right: 2em;
+  background-color: rgb(17, 67, 66);
+  color: white;
+  padding: 1em;
+}
+
 #search-panel {
   margin-top: 2em;
   display: flex;
@@ -21,6 +30,19 @@ main {
   padding-left: 2em;
   align-items: baseline;
   justify-content: center;
+}
+
+#ep-select {
+  background-color: white;
+  padding: 0.7em;
+}
+#search-count {
+  background-color: rgb(17, 67, 66);
+  color: white;
+  padding: 0.5em;
+}
+#myInput {
+  padding: 0.5em;
 }
 
 .btn {
@@ -55,9 +77,4 @@ small {
 }
 .left-spacing {
   margin-left: 1em;
-}
-#search-count {
-  background-color: rgb(17, 67, 66);
-  color: white;
-  padding: 0.5em;
 }

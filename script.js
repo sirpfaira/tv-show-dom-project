@@ -1,30 +1,27 @@
 let allEpisodes = [];
-let epSelect = document.querySelector('#ep-select');
-epSelect.addEventListener('change', (event) => {
-  const index = event.target.value;
-  let passArray = [];
-  if (index == 1) {
-    passArray = [...allEpisodes];
-  } else {
-    passArray.push(allEpisodes[index - 2]);
-  }
-  makePageForEpisodes(passArray);
-  //alert(`You like ${event.target.value}`);
-});
 
 function setup() {
-  allEpisodes = getAllEpisodes();
-  makePageForEpisodes(allEpisodes);
+  //All scheduled shows for the day =>>>> http://api.tvmaze.com/schedule
+  fetch('https://api.tvmaze.com/shows/527/episodes')
+    .then((response) => response.json())
+    .then((data) => init(data))
+    .catch((error) => console.error(error));
+}
+function init(epArr) {
+  for (let i = 0; i < epArr.length; i++) {
+    allEpisodes[i] = epArr[i];
+  }
 
-  for (let i = 0; i < allEpisodes.length; i++) {
-    const optText = `S${`0${allEpisodes[i].season}`.slice(
-      -2
-    )}E${`0${allEpisodes[i].number}`.slice(-2)} - ${allEpisodes[i].name}`;
-    epSelect.options[epSelect.options.length] = new Option(optText, i + 2);
-    /*const option = document.createElement('option');
-    option.value = i + 2;
-    option.innerHTML = allEpisodes[i].name;
-    epSelect.appendChild(option);*/
+  if (allEpisodes.length > 0) {
+    for (let i = 0; i < allEpisodes.length; i++) {
+      const optText = `S${`0${allEpisodes[i].season}`.slice(
+        -2
+      )}E${`0${allEpisodes[i].number}`.slice(-2)} - ${allEpisodes[i].name}`;
+      epSelect.options[epSelect.options.length] = new Option(optText, i + 2);
+    }
+    makePageForEpisodes(allEpisodes);
+  } else {
+    setup();
   }
 }
 
@@ -33,7 +30,6 @@ function makePageForEpisodes(episodeList) {
   mainContainer.innerHTML = '';
   const cardsContainer = document.createElement('div');
   cardsContainer.className = 'row row-cols-1 row-cols-md-3 g-4';
-  //cardsContainer.id = "cards-container";
 
   for (let x = 0; x < episodeList.length; x++) {
     const currentEpisode = episodeList[x];
@@ -70,7 +66,6 @@ function makePageForEpisodes(episodeList) {
     footer.className = 'card-footer text-center';
 
     const small = document.createElement('small');
-    //small.className = "text-muted";
     small.innerHTML = 'Source: TVMaze.com';
     footer.appendChild(small);
 
@@ -103,12 +98,23 @@ function mySearchFunction() {
       itemTitle.toUpperCase().indexOf(filter) > -1 ||
       itemSummary.toUpperCase().indexOf(filter) > -1
     ) {
-      //search word found
       matchingEpisodes.push(item);
     }
   }
 
   makePageForEpisodes(matchingEpisodes);
 }
+
+let epSelect = document.querySelector('#ep-select');
+epSelect.addEventListener('change', (event) => {
+  const index = event.target.value;
+  let passArray = [];
+  if (index == 1) {
+    passArray = [...allEpisodes];
+  } else {
+    passArray.push(allEpisodes[index - 2]);
+  }
+  makePageForEpisodes(passArray);
+});
 
 window.onload = setup;
