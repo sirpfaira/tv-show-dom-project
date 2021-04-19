@@ -1,4 +1,5 @@
 let allEpisodes = [];
+let allShows = [];
 
 function setup() {
   //All scheduled shows for the day =>>>> http://api.tvmaze.com/schedule
@@ -81,7 +82,7 @@ function makePageForEpisodes(episodeList) {
   }
   mainContainer.appendChild(cardsContainer);
   const filmCount = document.querySelector('#search-count');
-  filmCount.innerHTML = `Displaying ${episodeList.length}/${allEpisodes.length} episodes`;
+  filmCount.innerHTML = `Showing ${episodeList.length}/${allEpisodes.length} episodes`;
 }
 
 function mySearchFunction() {

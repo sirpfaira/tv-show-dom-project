@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TV Show Project | Simba Pfaira (github.com/sirpfaira)</title>
     <link href="style.css" rel="stylesheet" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link
       href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap"
       rel="stylesheet"
@@ -25,27 +26,30 @@
   <body>
     <header class="page-header bottom-spacing top-spacing">
       <div class="page-heading">
-        <h1>The Collection Of All TV Shows Ever Produced</h1>
+        <h1 class="header-title">All episodes of</h1>
       </div>
       <div class="action-panel">
         <div class="sel-search-div">
-          <select class="show-select">
-            <option value="1">All shows</option>
+          <select class="ep-select">
+            <option value="1">All episodes</option>
           </select>
           <input
             type="text"
-            class="search-bar"
-            onkeyup="searchFunction()"
-            placeholder="Search show"
+            class="search-bar left-spacing"
+            onkeyup="mySearchFunction()"
+            placeholder="Search episode"
           />
         </div>
-        <div class="count-div">
-          <p class="search-count">Search by name or keyword</p>
+        <div class="top-spacing count-div">
+          <p class="left-spacing search-count">
+            Search episode by name, genre or keyword
+          </p>
         </div>
       </div>
     </header>
-    <main class="content-container"></main>
-    <script src="show-script.js"></script>
-    <script src="shows.js"></script>
+
+    <main class="episode-container"></main>
+    <script src="episodes.js"></script>
+    <script src="ep-script.js"></script>
   </body>
 </html>

@@ -1,80 +1,278 @@
-#content-container {
-  margin: 2em;
+/*             HEADER 
+  --------------------------------------*/
+
+.page-header {
+  text-align: center;
+  margin-left: 1em;
+  margin-right: 1em;
+  font-family: 'Special Elite', cursive;
 }
+
+.page-heading {
+  background-color: rgb(17, 67, 66);
+  color: white;
+  padding-top: 0.7em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.action-panel {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.sel-search-div {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  max-width: 100%;
+}
+.ep-select,
+.show-select {
+  background-color: white;
+  padding: 0.7em;
+  max-width: 50%;
+  min-width: 47%;
+}
+
+.search-bar {
+  padding: 0.5em;
+  max-width: 50%;
+  margin-left: 0.8em;
+}
+.count-div {
+  max-width: 100%;
+  margin-top: 0.8em;
+}
+.search-count {
+  background-color: rgb(17, 67, 66);
+  color: white;
+  padding: 0.5em;
+}
+
+/*                MAIN CONTENT 
+  ---------------------------------------------*/
+
+/*            SHOW CARD
+-----------------------------------000000000--------------*/
+
+.full-card {
+  background-color: antiquewhite;
+  box-shadow: 0px 0px 11px 5px rgba(30, 224, 182, 0.562);
+  padding: 1em;
+  border-radius: 5px;
+  max-width: 100%;
+  margin-bottom: 2em;
+}
+
+.show-title {
+  font-size: 33px;
+  font-weight: bold;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.show-img {
+  width: 100%;
+  height: auto;
+}
+.desc-div {
+  background-color: rgb(60, 148, 139);
+  margin-top: 0.8em;
+  padding-top: 0.8em;
+  padding-left: 0.8em;
+  padding-right: 0.8em;
+}
+
+.info-div {
+  background-color: rgb(60, 148, 139);
+  padding-top: 0.8em;
+  padding-left: 0.8em;
+  padding-right: 0.8em;
+  padding-bottom: 0.8em;
+  margin-top: 0.8em;
+}
+
+/* EPISODE */
+.ep-card {
+  background-color: antiquewhite;
+  box-shadow: 0px 0px 11px 5px rgba(30, 224, 182, 0.562);
+  padding: 1em;
+  border-radius: 5px;
+  max-width: 100%;
+  margin-bottom: 2em;
+  display: flex;
+  flex-direction: column;
+}
+
+.ep-title {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.ep-img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.ep-card-body {
+  background-color: rgb(17, 75, 80);
+  color: white;
+  text-align: center;
+  margin-top: 0.5em;
+  padding-top: 0.8em;
+  padding-left: 0.8em;
+  padding-right: 0.8em;
+  padding-bottom: 0.8em;
+  border-radius: 5px;
+}
+.ep-card-footer {
+  margin-top: 0.5em;
+  padding-top: 0.8em;
+  padding-left: 0.8em;
+  padding-right: 0.8em;
+  padding-bottom: 0.8em;
+  border-radius: 5px;
+  background-color: rgb(17, 67, 66) !important;
+}
+
+/* FOOTER */
+
+/*             GENERAL AND CUSTOM CSS
+  ----------------------------------------------- */
 body {
   background-image: url('/img/background-image.jpg');
 }
 
-header {
-  text-align: center;
-  margin-top: 1em;
-  margin-bottom: 1em;
-
+.content-container,
+.episode-container {
+  margin: 1em;
   font-family: 'Special Elite', cursive;
-}
-main {
-  font-family: 'Special Elite', cursive;
-}
-#page-heading {
-  margin-left: 2em;
-  margin-right: 2em;
-  background-color: rgb(17, 67, 66);
-  color: white;
-  padding: 1em;
-}
-
-#search-panel {
-  margin-top: 2em;
-  display: flex;
-  flex-direction: row;
-  padding-left: 2em;
-  align-items: baseline;
-  justify-content: center;
-}
-
-#ep-select {
-  background-color: white;
-  padding: 0.7em;
-}
-#search-count {
-  background-color: rgb(17, 67, 66);
-  color: white;
-  padding: 0.5em;
-}
-#myInput {
-  padding: 0.5em;
-}
-
-.btn {
-  margin-left: 1em;
-  background-color: rgb(60, 148, 139) !important;
-  color: white;
-}
-img {
-  padding: 1%;
-  border-style: solid;
-  border-width: 1px;
-  border-color: rgb(31, 75, 71);
-}
-
-.card-body {
-  background-color: rgb(17, 75, 80);
-  color: white;
-  border-style: solid;
-  border-width: 1px;
-  border-color: rgb(31, 75, 71);
-  text-align: center;
-}
-.card-footer {
-  border-style: solid;
-  border-width: 1px;
-  border-color: rgb(31, 75, 71);
-  background-color: rgb(17, 67, 66) !important;
 }
 
 small {
   color: white;
 }
+
+.card-button {
+  color: blue !important;
+}
+
 .left-spacing {
   margin-left: 1em;
+}
+
+.right-spacing {
+  margin-right: 1em;
+}
+
+.bottom-spacing {
+  margin-bottom: 1em;
+}
+
+.top-spacing {
+  margin-top: 1em;
+}
+
+/*              MEDIA QUERIES - LARGE SCREENS
+---------------------------------------------*/
+
+@media (min-width: 850px) {
+  .action-panel {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+    max-width: 100%;
+  }
+
+  .sel-search-div {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    max-width: 60%;
+  }
+
+  .ep-select,
+  .show-select {
+    background-color: white;
+    padding: 0.7em;
+    max-width: 50%;
+  }
+
+  .search-bar {
+    padding: 0.5em;
+    max-width: 50%;
+  }
+
+  .count-div {
+    min-width: 30;
+    max-width: 30;
+    margin-left: 0.8em;
+  }
+  .search-count {
+    width: 100%;
+  }
+
+  .card-content {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .info-div {
+    min-width: 20%;
+    margin-left: 0.7em;
+    margin-top: 0px;
+  }
+  .desc-div {
+    margin-left: 0.7em;
+    margin-top: 0px;
+  }
+  .img-div {
+    min-width: 22%;
+  }
+}
+
+@media (min-width: 650px) {
+  /*full 1920*/
+  .episode-container {
+    display: flex;
+    margin-right: 0%;
+    flex-wrap: wrap;
+  }
+  .ep-card {
+    width: 48%;
+    box-sizing: border-box;
+    margin-right: 1%;
+  }
+  /* alternate grid method
+  .parent {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}*/
+}
+
+@media (min-width: 1024px) {
+  /*full 1920*/
+  .episode-container {
+    display: flex;
+    margin-right: 0%;
+    flex-wrap: wrap;
+  }
+  .ep-card {
+    width: 32%;
+    box-sizing: border-box;
+    margin-right: 1%;
+  }
 }
