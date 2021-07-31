@@ -32,6 +32,10 @@ function init(showArr) {
 function refreshPage(showArr) {
   const cardsContainer = document.querySelector('.content-container');
   cardsContainer.innerHTML = '';
+  /*
+  showArr = passedArr.sort(
+    (el1, el2) => el1.rating.average - el2.rating.average
+  );*/
   const filmCount = document.querySelector('.search-count');
   if (showArr.length < allShows.length) {
     filmCount.innerHTML = `Found ${showArr.length} shows`;
@@ -104,9 +108,11 @@ function getShowCard(show) {
   const status = document.createElement('p');
   let bold2 = document.createElement('b');
   bold2.innerHTML = 'Status:  ';
+
   const span2 = document.createElement('span');
   span2.className = 'status';
   span2.innerHTML = show.status;
+  
   status.appendChild(bold2);
   status.appendChild(span2);
   infoDiv.appendChild(status);

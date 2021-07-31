@@ -183,7 +183,7 @@ small {
   margin-top: 1em;
 }
 
-/*              MEDIA QUERIES - LARGE SCREENS
+/*              MEDIA QUERIES - LARGE SCREEN
 ---------------------------------------------*/
 
 @media (min-width: 850px) {
@@ -243,7 +243,6 @@ small {
 }
 
 @media (min-width: 650px) {
-  /*full 1920*/
   .episode-container {
     display: flex;
     margin-right: 0%;
@@ -264,7 +263,6 @@ small {
 }
 
 @media (min-width: 1024px) {
-  /*full 1920*/
   .episode-container {
     display: flex;
     margin-right: 0%;
